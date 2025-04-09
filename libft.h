@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:41:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/09 14:43:24 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:28:25 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
