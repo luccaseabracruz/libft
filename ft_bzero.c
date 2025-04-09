@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 13:41:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/09 13:35:55 by lseabra-         ###   ########.fr       */
+/*   Created: 2025/04/09 12:58:10 by lseabra-          #+#    #+#             */
+/*   Updated: 2025/04/09 13:45:43 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+	size_t	i;
 
-# include <stdio.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	str = (char *)s;
+	i = 0;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
+}
+/*
+int	main(void)
+{
+	char	str[] = "Lucca";
+	char	*ptr = str;
+	printf("str: %s\n", str);
+	ft_bzero(str, 2);
+	ptr += 2;
+	printf("str: %s\n", ptr);
+}
+*/
