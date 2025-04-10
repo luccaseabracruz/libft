@@ -1,42 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 16:11:00 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/10 17:45:00 by lseabra-         ###   ########.fr       */
+/*   Created: 2025/04/10 17:18:31 by lseabra-          #+#    #+#             */
+/*   Updated: 2025/04/10 17:47:32 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	const char	*ptr;
+	const char	*last;
 
 	ptr = s;
+	last = s;
 	while (*ptr)
 	{
 		if (*ptr == (char)c)
-			return ((char *)ptr);
+			last = ptr;
 		ptr++;
 	}
 	if (*ptr == (char)c)
-		return ((char *)ptr);
-	return (NULL);
+		last = ptr;
+	if (*last == (char)c)
+		return ((char *)last);
+	else
+		return (NULL);
 }
 /* 
 int	main(void)
 {
-	char 	*s = "Eu sou Stephanie";
-	int	c = -204;
-	char	*r1 = strchr(s, c);
-	char	*r2 = ft_strchr(s, c);
-	if (r1 == r2)
-		printf("same result\n");
+	char	*s = "AaBcCDd";
+	int		c = 92;
+	if (strrchr(s, c) == ft_strrchr(s, c))
+		printf("Same behavior.\n");
 	else
-		printf("something is wrong\n");
+		printf
+		(
+			"Something is wrong.\n
+			original: %s\n
+			My: %s\n"
+			, strrchr(s, c), ft_strrchr(s, c)
+		);
 }
  */
