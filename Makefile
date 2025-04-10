@@ -11,7 +11,8 @@ SRCS =  ft_isalpha.c \
 		ft_memmove.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_tolower.c
 OBJS = ${SRCS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
