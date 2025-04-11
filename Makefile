@@ -19,7 +19,8 @@ SRCS =  ft_isalpha.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
-		ft_atoi.c
+		ft_atoi.c \
+		ft_calloc.c
 OBJS = ${SRCS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 12:58:10 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/11 14:36:59 by lseabra-         ###   ########.fr       */
+/*   Created: 2025/04/11 13:29:24 by lseabra-          #+#    #+#             */
+/*   Updated: 2025/04/11 14:38:59 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	ft_memset(s, 0, n);
+	void	*ptr;
+
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }
-/*
-int	main(void)
-{
-	char	str[] = "Lucca";
-	char	*ptr = str;
-	printf("str: %s\n", str);
-	ft_bzero(str, 2);
-	ptr += 2;
-	printf("str: %s\n", ptr);
-}
-*/
