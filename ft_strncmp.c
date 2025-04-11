@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:53:15 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/10 18:39:23 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/11 12:54:09 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while ((unsigned char)*s1 && (unsigned char)*s2 && i < n)
 	{
 		if ((unsigned char)*s1 != (unsigned char)*s2)
-			return ((unsigned char)*s1 - (unsigned char)*s2);
+			break ;
 		s1++;
 		s2++;
 		n--;
