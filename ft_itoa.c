@@ -6,13 +6,13 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:50:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/15 16:04:17 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:18:10 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	int_size(int n)
+static size_t	int_size(int n)
 {
 	size_t	size;
 
