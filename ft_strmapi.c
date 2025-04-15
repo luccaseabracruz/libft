@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:10:04 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/15 16:38:49 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/15 17:01:35 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (res);
 }
 /* 
-static int	ft_tolower(int c)
+char ft_change_even_index(unsigned int i, char c)
 {
-	if (ft_isalpha(c) && c <= 90)
-		c += 32;
-	return (c);
+	if (i % 2 == 0 && ft_isalpha(c))
+		return ft_toupper(c);
+	return c;
 }
 
 int	main(void)
 {
-	char	*str = "Lucca Seabra Cruz";
+	char	*str = "abcdefg";
 	printf("str: %s\n", str);
-	printf("res: %s\n", ft_strmapi(str, ft_tolower));
+	printf("res: %s\n", ft_strmapi(str, ft_change_even_index));
 }
  */
