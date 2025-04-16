@@ -36,7 +36,8 @@ SRCS =  ft_isalpha.c \
 		ft_putnbr_fd.c
 OBJS = ${SRCS:.c=.o}
 BONUS = ft_lstnew_bonus.c \
-		ft_lstadd_front_bonus.c
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c
 BONUS_OBJS = ${BONUS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
