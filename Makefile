@@ -35,6 +35,9 @@ SRCS =  ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 OBJS = ${SRCS:.c=.o}
+BONUS = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c
+BONUS_OBJS = ${BONUS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
@@ -49,6 +52,9 @@ all: ${NAME}
 
 ${NAME}: ${OBJS} libft.h
 	${LIBC} ${NAME} ${OBJS}
+
+bonus: ${OBJS} ${BONUS_OBJS} libft.h
+	${LIBC} ${NAME} ${OBJS} ${BONUS_OBJS}
 
 clean:
 	${RM} ${OBJS}
