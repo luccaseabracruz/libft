@@ -37,7 +37,8 @@ SRCS =  ft_isalpha.c \
 OBJS = ${SRCS:.c=.o}
 BONUS = ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
-		ft_lstsize_bonus.c
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c
 BONUS_OBJS = ${BONUS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,7 +59,7 @@ bonus: ${OBJS} ${BONUS_OBJS} libft.h
 	${LIBC} ${NAME} ${OBJS} ${BONUS_OBJS}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean: clean
 	${RM} ${NAME}
