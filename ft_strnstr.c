@@ -6,27 +6,42 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 11:55:22 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/16 18:14:53 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:50:05 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_strnstr - Locates the first occurrence of the null-terminated string
+ * 'little' within the string 'big', where not more than 'len' characters
+ * are searched. Characters after a '\0' are not searched.
+ * @param big: The larger string to search within.
+ * @param little: The substring to search for.
+ * @param len: The maximum number of characters to search.
+ * 
+ * @return: A pointer to the beginning of the located substring, or NULL
+ * if the substring is not found.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	if (ft_strlen(little) == 0)
+	{
 		return ((char *)big);
+	}
 	while (*big && len > ft_strlen(little) - 1)
 	{
 		if (ft_strncmp(big, little, ft_strlen(little)) == 0)
+		{
 			return ((char *)big);
+		}
 		big++;
 		len--;
 	}
 	return (NULL);
 }
-/* 
-#include <bsd/string.h>
+
+/* #include <bsd/string.h>
 int	main(void)
 {
 	const char *largestring = "Foo Bar Baz";
@@ -45,5 +60,4 @@ int	main(void)
 		printf("Something wrong with ft_strnstr\n");
 	printf("og_ptr = %s\n", og_ptr);
 	printf("my_ptr = %s\n", my_ptr);
-}
- */
+}*/
