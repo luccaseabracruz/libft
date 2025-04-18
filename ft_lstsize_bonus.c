@@ -6,12 +6,18 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:10:43 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/16 19:20:10 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:45:15 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstsize - Counts the number of elements in a linked list.
+ * @param lst: A pointer to the first node of the linked list.
+ *
+ * @return The total number of nodes in the linked list.
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int		counter;
