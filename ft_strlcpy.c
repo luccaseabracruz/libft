@@ -6,12 +6,21 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:37:33 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/10 15:51:52 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:38:15 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_strlcpy - Copies up to size - 1 characters from the string src to dst, 
+ * null-terminating the result if size is not 0.
+ * @param dst  The destination buffer where the string will be copied.
+ * @param src  The source string to copy from.
+ * @param size The size of the destination buffer.
+ * 
+ * @return     The total length of the string it tried to create (length of src).
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
