@@ -6,12 +6,25 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 08:58:02 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 09:59:43 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:26:16 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstmap - Iterates through a linked list and applies a function to the 
+ * content of each node, creating a new list with the results.
+ * @param lst: The address of a pointer to the first node of the list.
+ * @param f: The function to apply to the content of each node.
+ * @param del: The function to delete the content of a node if needed.
+ *
+ * @return A new list resulting from the successive applications of 'f'.
+ *         Returns NULL if memory allocation fails or if 'lst' is NULL.
+ *
+ * @note: The 'del' function is used to free the content of a node in case
+ *       of an error during memory allocation.
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
