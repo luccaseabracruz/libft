@@ -6,14 +6,14 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:49:45 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:16:48 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:54:43 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * ft_isdigit - Checks if the given character is a digit (0-9).
  * 
- * @c: The character to check, represented as an integer.
+ * @param c: The character to check, represented as an integer.
  * 
  * Return: 1 if the character is a digit, 0 otherwise.
  */

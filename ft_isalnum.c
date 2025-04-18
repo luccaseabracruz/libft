@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:55:36 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:16:38 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:54:08 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * ft_isalnum - Checks if the given character is alphanumeric.
  * 
- * @c: The character to check, represented as an integer.
+ * @param c: The character to check, represented as an integer.
  * 
  * Return: 1 if the character is a letter (a-z, A-Z) or a digit
  * (0-9), 0 otherwise.

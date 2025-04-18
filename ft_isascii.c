@@ -6,14 +6,14 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:10:24 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:16:41 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:54:31 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * ft_isascii - Checks if the given character is part of the ASCII set.
  * 
- * @c: The character to check, represented as an integer.
+ * @param c: The character to check, represented as an integer.
  * 
  * Return: 1 if the character is in the ASCII range (0-127), 0 otherwise.
  */

@@ -6,14 +6,14 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:20:21 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:17:17 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:55:40 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * ft_isprint - Checks if the given character is printable.
  * 
- * @c: The character to check, represented as an integer.
+ * @param c: The character to check, represented as an integer.
  * 
  * Return: 1 if the character is printable (including space, 32-126), 
  * 0 otherwise.
@@ -43,7 +43,8 @@ int	main(void)
 
 	int count = sizeof(test_cases) / sizeof(test_cases[0]);
 	for (int i = 0; i < count; i++)
-		printf("ft_isprint(%d) = %d\n", test_cases[i], ft_isprint(test_cases[i]));
+		printf("ft_isprint(%d) = %d\n",
+		test_cases[i], ft_isprint(test_cases[i]));
 
 	return 0;
 } */

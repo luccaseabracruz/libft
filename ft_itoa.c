@@ -6,12 +6,19 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:50:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/15 19:18:10 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:58:03 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * int_size - Calculates the number of characters needed to represent an integer.
+ * @param n: The integer to evaluate.
+ * 
+ * Returns the size of the string required to represent the integer, including
+ * the sign if the number is negative.
+ */
 static size_t	int_size(int n)
 {
 	size_t	size;
@@ -32,6 +39,17 @@ static size_t	int_size(int n)
 	return (++size);
 }
 
+/**
+ * ft_itoa - Converts an integer to a null-terminated string.
+ * @param n: The integer to convert.
+ * 
+ * Allocates memory and returns a string representation of the integer.
+ * Handles special cases like INT_MIN and negative numbers.
+ * 
+ * Returns:
+ * - A pointer to the string representation of the integer.
+ * - NULL if memory allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	size_t	size;

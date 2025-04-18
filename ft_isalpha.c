@@ -6,13 +6,13 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:08:45 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:00:07 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:54:21 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * ft_isalpha - Checks if a character is an alphabetic letter.
- * @c: The character to check, represented as an integer.
+ * @param c: The character to check, represented as an integer.
  *
  * This function checks whether the given character is an uppercase
  * or lowercase alphabetic letter (A-Z or a-z).

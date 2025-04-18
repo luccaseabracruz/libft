@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:29:24 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:52:25 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:53:49 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	{
 		printf("Test 1: Memory allocated for integers.\n");
 		for (int i = 0; i < 5; i++)
-			printf("arr[%d] = %d\n", i, arr[i]); // Should print 0 for all elements
+			printf("arr[%d] = %d\n", i, arr[i]);
 		free(arr);
 	}
 	else
