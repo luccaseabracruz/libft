@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:30:42 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:30:42 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:00:29 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 /**
  * ft_memcpy - Copies memory from one location to another.
- * @dst: Pointer to the destination memory block.
- * @src: Pointer to the source memory block.
- * @n: The number of bytes to copy.
+ * @param dst: Pointer to the destination memory block.
+ * @param src: Pointer to the source memory block.
+ * @param n: The number of bytes to copy.
  *
- * Return: A pointer to the destination memory block.
- * Note: The memory areas must not overlap.
+ * @return A pointer to the destination memory block.
+ * @note The memory areas must not overlap.
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
