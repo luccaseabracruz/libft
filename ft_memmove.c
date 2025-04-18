@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:07:10 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 14:03:20 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:08:14 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,17 @@ static void	*ft_backwards_memcpy(void *dest, const void *src, size_t n)
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (dest == src)
+	{
 		return (dest);
+	}
 	if (src < dest && src + n >= dest)
+	{
 		ft_backwards_memcpy(dest, src, n);
+	}
 	else
+	{
 		ft_memcpy(dest, src, n);
+	}
 	return (dest);
 }
 

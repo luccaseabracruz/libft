@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:31:00 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 14:04:58 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:07:46 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	if (fd >= 0)
+	{
 		write(fd, &c, 1);
+	}
 }
 /* 
 int	main(void)

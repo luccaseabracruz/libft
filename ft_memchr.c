@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 19:02:00 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 13:51:26 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:08:49 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n > 0)
 	{
 		if (*ptr == (unsigned char)c)
+		{
 			return ((void *)ptr);
+		}
 		ptr++;
 		n--;
 	}
