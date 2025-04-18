@@ -6,12 +6,22 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 20:39:33 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/17 21:21:06 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:18:16 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstiter - Iterates through a linked list and applies a function to each element's content.
+ * @param lst: The beginning of the linked list.
+ * @param f: The function to apply to each element's content.
+ *
+ * This function traverses the linked list starting from the node pointed to by `lst`.
+ * For each node, it applies the function `f` to the `content` of the node.
+ * If either `lst` or `f` is NULL, the function does nothing.
+ * The function does not modify the list itself, only the content of each node.
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
