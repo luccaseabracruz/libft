@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:07:10 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 14:02:19 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:03:20 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * memory areas. It uses a helper function, ft_backwards_memcpy, to copy
  * memory safely when the source and destination overlap.
  * 
- *  * ft_memmove - Copies memory from one location to another, handling overlap.
+ * ft_memmove - Copies memory from one location to another, handling overlap.
  * @param dst: Pointer to the destination memory block.
  * @param src: Pointer to the source memory block.
  * @param n: The number of bytes to copy.
