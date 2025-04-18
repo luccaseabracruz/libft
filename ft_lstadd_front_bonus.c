@@ -6,12 +6,21 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:16:47 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/16 18:51:28 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:04:56 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstadd_front - Adds a new node at the beginning of the list.
+ * @param lst A pointer to the pointer of the first node of the list.
+ * @param new The new node to be added to the list.
+ * 
+ * This function updates the head of the list to point to the new node,
+ * and the new node's `next` pointer will point to the previous head.
+ * If either `lst` or `new` is NULL, the function does nothing.
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)

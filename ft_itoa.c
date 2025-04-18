@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:50:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 11:58:03 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:03:22 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,15 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == INT_MIN)
+	{
 		return (ft_strdup("-2147483648"));
+	}
 	size = int_size(n);
 	str = malloc((size + 1) * sizeof(char));
 	if (!str)
+	{
 		return (NULL);
+	}
 	if (n < 0)
 	{
 		str[0] = '-';
