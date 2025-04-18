@@ -6,12 +6,21 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 20:23:44 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/17 21:15:16 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:08:40 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstclear - Frees the memory of a linked list and its contents.
+ * @param lst A double pointer to the first node of the list.
+ * @param del A function pointer to free the content of each node.
+ * 
+ * This function iterates through a linked list, applying the provided
+ * `del` function to free the content of each node, and then frees the
+ * node itself. The pointer to the list is set to NULL after clearing.
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
