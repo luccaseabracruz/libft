@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 15:26:32 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 15:04:17 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:05:26 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
  * @param start: The start index of the substring in the string 's'.
  * @param len: The maximum length of the substring.
  *
- * @returns: A pointer to the substring, or NULL if the allocation fails. If 'start'
- * 			 is greater than the length of 's', an empty string is returned.
+ * @returns: A pointer to the substring, or NULL if the allocation fails. 
+ * If 'start' is greater than the length of 's', an empty string is returned.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
