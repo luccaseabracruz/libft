@@ -6,12 +6,21 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 10:35:14 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/16 16:39:42 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:43:55 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_lstnew - Allocates (with malloc) and initializes a new t_list node.
+ * @param content The content to store in the new node.
+ * 
+ * @return t_list* A pointer to the new node, or NULL if allocation fails.
+ * 
+ * The `content` parameter is stored as-is in the `content` field of the node.
+ * The `next` pointer of the new node is initialized to NULL.
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
