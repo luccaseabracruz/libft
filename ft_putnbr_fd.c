@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 18:56:20 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/18 14:10:28 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:11:54 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10) + 48, fd);
 	}
 }
-/* 
-int	main(void)
+
+/* int	main(void)
 {
 	ft_putnbr_fd(123, 1);
 	ft_putchar_fd('\n', 1);
@@ -59,5 +59,4 @@ int	main(void)
 	ft_putchar_fd('\n', 1);
 
 	return (0);
-}
- */
+} */
