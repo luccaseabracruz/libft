@@ -6,12 +6,19 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:58:10 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/11 14:36:59 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:29:36 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_bzero - Sets a block of memory to zero.
+ * @s: Pointer to the memory block to zero out.
+ * @n: The number of bytes to set to zero.
+ *
+ * This function is equivalent to calling ft_memset with a value of 0.
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

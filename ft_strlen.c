@@ -6,19 +6,27 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:54:45 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/09 10:58:05 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:31:51 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_strlen - Calculates the length of a null-terminated string.
+ * @s: The string whose length is to be calculated.
+ *
+ * Return: The number of characters in the string, excluding the null terminator.
+ */
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
 	while (s[i])
+	{
 		i++;
+	}
 	return (i);
 }
 /*

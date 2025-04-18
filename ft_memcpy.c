@@ -6,12 +6,21 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:30:42 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/04/09 16:05:48 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/04/18 11:30:42 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * ft_memcpy - Copies memory from one location to another.
+ * @dst: Pointer to the destination memory block.
+ * @src: Pointer to the source memory block.
+ * @n: The number of bytes to copy.
+ *
+ * Return: A pointer to the destination memory block.
+ * Note: The memory areas must not overlap.
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -22,7 +31,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest_cp = (char *)dest;
 	src_cp = (char *)src;
 	if (dest_cp == NULL && src_cp == NULL)
+	{
 		return (NULL);
+	}
 	while (i < n)
 	{
 		dest_cp[i] = src_cp[i];
