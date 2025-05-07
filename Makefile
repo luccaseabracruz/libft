@@ -24,7 +24,6 @@ SRCS =  ft_isalpha.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
-		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
 		ft_itoa.c \
@@ -60,8 +59,11 @@ all: ${NAME}
 ${NAME}: ${OBJS} libft.h
 	${LIBC} ${NAME} ${OBJS}
 
-bonus: ${OBJS} ${BONUS_OBJS} libft.h
+bonus: .bonus
+
+.bonus: ${OBJS} ${BONUS_OBJS} libft.h
 	${LIBC} ${NAME} ${OBJS} ${BONUS_OBJS}
+	touch .bonus
 
 clean:
 	${RM} ${OBJS} ${BONUS_OBJS}
