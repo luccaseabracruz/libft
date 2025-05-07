@@ -44,6 +44,7 @@ BONUS = ft_lstnew_bonus.c \
 		ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
 BONUS_OBJS = ${BONUS:.c=.o}
+BONUS_MARK = .bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
@@ -56,17 +57,17 @@ LIBC = ar rcs
 
 all: ${NAME}
 
-${NAME}: ${OBJS} libft.h
+${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
-bonus: .bonus
+bonus: $(BONUS_MARK)
 
-.bonus: ${OBJS} ${BONUS_OBJS} libft.h
+$(BONUS_MARK): ${OBJS} ${BONUS_OBJS} 
 	${LIBC} ${NAME} ${OBJS} ${BONUS_OBJS}
 	touch .bonus
 
 clean:
-	${RM} ${OBJS} ${BONUS_OBJS}
+	${RM} ${OBJS} ${BONUS_OBJS} $(BONUS_MARK)
 
 fclean: clean
 	${RM} ${NAME}
