@@ -6,7 +6,7 @@
 #    By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 11:48:51 by lseabra-          #+#    #+#              #
-#    Updated: 2025/05/14 14:30:28 by lseabra-         ###   ########.fr        #
+#    Updated: 2025/05/14 15:15:31 by lseabra-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,9 @@ OBJS =$(addprefix $(BUILD_PATH)/, $(SRCS:.c=.o))
 BUILD_PATH = build
 
 # BONUS: List of bonus source files for additional functionality.
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
-        ft_lstsize_bonus.c ft_lstlast_bonus.c \
-        ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-        ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 # BONUS_OBJS: List of object files generated from the bonus source files.
 BONUS_OBJS = $(addprefix $(BUILD_PATH)/, $(BONUS:.c=.o))
@@ -58,7 +57,7 @@ TCH = touch            # Command to create an empty file
 RM = rm -f             # Command to remove files
 RM_DIR = rm -rf        # Command to remove directories
 AR = ar rcs            # Command to create a static library
-MKDIR_P = mkdir -p     @
+MKDIR_P = mkdir -p     # Command to create a directory
 
 
 #==============================================================================#
