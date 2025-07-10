@@ -6,18 +6,32 @@
 #    By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 11:48:51 by lseabra-          #+#    #+#              #
-#    Updated: 2025/07/10 11:18:47 by lseabra-         ###   ########.fr        #
+#    Updated: 2025/07/10 11:53:39 by lseabra-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+#==============================================================================#
+#                                 COLOR CODES                                  #
+#==============================================================================#
+GREEN   = \033[0;32m
+YELLOW  = \033[0;33m
+BLUE    = \033[0;34m
+RESET   = \033[0m
 
 #==============================================================================#
 #                                  VARIABLES                                   #
 #==============================================================================#
 
-# NAME: The name of the final library file to be created.
-NAME = libft.a
+# Library name
+NAME                = libft.a
 
-# SRCS: List of source files to be compiled into object files.
+# Paths
+BUILD_PATH          = build
+SRCS_PATH           = srcs
+FT_PRINTF_SRCS_PATH = srcs_ft_printf
+GNL_SRCS_PATH       = srcs_gnl
+
+# Source files
 SRCS = $(addprefix $(SRCS_PATH)/, \
     ft_isalpha.c    ft_isdigit.c    ft_isalnum.c    ft_isascii.c \
     ft_isprint.c    ft_strlen.c     ft_memset.c     ft_bzero.c \
@@ -40,73 +54,69 @@ FT_PRINTF_SRCS = $(addprefix $(FT_PRINTF_SRCS_PATH)/, \
     ft_putchar_count.c  ft_putstr_count.c ft_uintlen_base.c \
     ft_putnbr_count.c   ft_putunbr_count.c \
 )
+GNL_SRCS = $(addprefix $(GNL_SRCS_PATH)/, get_next_line.c get_next_line_utils.c)
+GNL_BONUS_SRCS = $(addprefix $(GNL_SRCS_PATH)/, get_next_line_bonus.c get_next_line_utils_bonus.c)
 
-# OBJS: List of object files generated from the source files.
-OBJS =$(addprefix $(BUILD_PATH)/, $(notdir $(SRCS:.c=.o)))
-BONUS_OBJS = $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS:.c=.o)))
-FT_PRINTF_OBJS = $(addprefix $(BUILD_PATH)/, $(notdir $(FT_PRINTF_SRCS:.c=.o)))
+# Object files
+OBJS            = $(addprefix $(BUILD_PATH)/, $(notdir $(SRCS:.c=.o)))
+BONUS_OBJS      = $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS_SRCS:.c=.o)))
+FT_PRINTF_OBJS  = $(addprefix $(BUILD_PATH)/, $(notdir $(FT_PRINTF_SRCS:.c=.o)))
+GNL_OBJS        = $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRCS:.c=.o)))
+GNL_BONUS_OBJS  = $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_BONUS_SRCS:.c=.o)))
 
-# PATHS
-BUILD_PATH = build
-SRCS_PATH = srcs
-FT_PRINTF_SRCS_PATH = srcs_ft_printf
-
-# BONUS_MARK: A marker file to indicate that the bonus has been built.
-BONUS_MARK = .bonus
+# Bonus mark
+BONUS_MARK      = .bonus
 
 # Compiler and flags
-CC = cc                # Compiler to use
-CFLAGS = -Wall -Wextra -Werror  # Compilation flags
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror
 
 # Utility commands
-TCH = touch            # Command to create an empty file
-RM = rm -f             # Command to remove files
-RM_DIR = rm -rf        # Command to remove directories
-AR = ar rcs            # Command to create a static library
-MKDIR_P = mkdir -p     # Command to create a directory
-
+TCH     = touch
+RM      = rm -f
+RM_DIR  = rm -rf
+AR      = ar rcs
+MKDIR_P = mkdir -p
 
 #==============================================================================#
 #                                    RULES                                     #
 #==============================================================================#
 
-# .PHONY: Declares phony targets to avoid conflicts with files of the same name.
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
-# all: Default target to build the library.
 all: $(NAME)
 
-# $(NAME): Rule to create the library from object files.
-$(NAME): $(OBJS) $(FT_PRINTF_OBJS)
-	@$(AR) $(NAME) $(OBJS) $(FT_PRINTF_OBJS)
+$(NAME): $(OBJS) $(FT_PRINTF_OBJS) $(GNL_OBJS)
+	@$(AR) $(NAME) $(OBJS) $(FT_PRINTF_OBJS) $(GNL_OBJS)
+	@echo "$(GREEN)[Library $(NAME) created!]$(RESET)"
 
-# Rule to compile source files into object files.
 $(BUILD_PATH)/%.o: $(SRCS_PATH)/%.c | $(BUILD_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_PATH)/%.o: $(FT_PRINTF_SRCS_PATH)/%.c | $(BUILD_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-# Rule to create the build directory if it doesn't exist.
+$(BUILD_PATH)/%.o: $(GNL_SRCS_PATH)/%.c | $(BUILD_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 $(BUILD_PATH):
 	@$(MKDIR_P) $(BUILD_PATH)
+	@echo "$(BLUE)[Build directory created.]$(RESET)"
 
-# bonus: Target to build the library with bonus functionality.
 bonus: $(BONUS_MARK)
 
-# $(BONUS_MARK): Rule to build the library with bonus object files.
-$(BONUS_MARK): $(OBJS) $(FT_PRINTF_OBJS) $(BONUS_OBJS) | $(BUILD_PATH)
-	@$(AR) $(NAME) $(OBJS) $(FT_PRINTF_OBJS) $(BONUS_OBJS)
+$(BONUS_MARK): $(OBJS) $(FT_PRINTF_OBJS) $(GNL_OBJS) $(BONUS_OBJS) $(GNL_BONUS_OBJS) | $(BUILD_PATH)
+	@$(AR) $(NAME) $(OBJS) $(FT_PRINTF_OBJS) $(GNL_OBJS) $(BONUS_OBJS) $(GNL_BONUS_OBJS)
 	@$(TCH) $(BONUS_MARK)
+	@echo "$(YELLOW)[Bonus library $(NAME) created with bonus objects!]$(RESET)"
 
-# clean: Removes object files and the bonus marker file.
 clean:
 	@$(RM_DIR) $(BUILD_PATH)
 	@$(RM) $(BONUS_MARK)
+	@echo "$(BLUE)[Cleaned build files.]$(RESET)"
 
-# fclean: Removes everything created by the Makefile, including the library.
 fclean: clean
 	@$(RM) $(NAME)
+	@echo "$(BLUE)[Full clean: library removed.]$(RESET)"
 
-# re: Cleans and rebuilds everything.
 re: fclean all
