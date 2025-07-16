@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:41:17 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/05/15 14:52:31 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/07/16 12:20:36 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # include <limits.h>
 # include <stdint.h>
 # include <fcntl.h>
+# include "ft_printf.h"
+# include "get_next_line.h"
+# include "get_next_line_bonus.h"
 
 # include <stdio.h>
 
