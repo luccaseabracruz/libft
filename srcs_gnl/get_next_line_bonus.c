@@ -48,7 +48,7 @@
  * - If the file descriptor is closed or no more lines are available, the corresponding
  *   buffer is freed.
  */
-char	*get_next_line_bonud(int fd)
+char	*get_next_line_bonus(int fd)
 {
 	static char	*buffer[1024];
 	char		*line;
