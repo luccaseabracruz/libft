@@ -6,11 +6,12 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:33:33 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/07/10 11:51:00 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/08/11 14:38:43 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/get_next_line_bonus.h"
+#include "../includes/get_next_line.h"
 #include <stdlib.h>
 #include <stdint.h>
 
