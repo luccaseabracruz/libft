@@ -6,7 +6,7 @@
 /*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 17:17:27 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/08/27 18:06:28 by lseabra-         ###   ########.fr       */
+/*   Updated: 2025/09/30 15:44:21 by lseabra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
  *
  * @param base: The string representing the base characters.
  *
- * Return: 1 if the base is valid (at least two unique characters, no duplicates,
- * and no '+', '-', or space), otherwise returns 0.
+ * Return: 1 if the base is valid (at least two unique characters, no
+ * duplicates, and no '+', '-', or space), otherwise returns 0.
  */
 static int	validate_base(char *base)
 {
@@ -74,7 +74,8 @@ static int	validate_char(char c, char *base)
  * @param c: The character to find.
  * @param base: The string representing the base characters.
  *
- * Return: the index of the character in the base string, or the length of the base if not found.
+ * Return: the index of the character in the base string, or the length of the 
+ * base if not found.
  */
 static int	find_position(char c, char *base)
 {
@@ -91,13 +92,16 @@ static int	find_position(char c, char *base)
 }
 
 /**
- * ft_atoi_base - Converts a string representing a number in a given base to an integer.
+ * ft_atoi_base - Converts a string representing a number in a given base to an 
+ * integer.
  *
  * @param str: The string containing the number to convert.
- * @param base: The string representing the valid characters of the base (e.g., "0123456789ABCDEF").
+ * @param base: The string representing the valid characters of the base 
+ * (e.g., "0123456789ABCDEF").
  *
- * Parses the input string `str`, interprets it as a number in the base specified by `base`,
- * and returns its integer value. Handles optional leading whitespace and sign characters.
+ * Parses the input string `str`, interprets it as a number in the base 
+ * specified by `base`, and returns its integer value. Handles optional leading 
+ * whitespace and sign characters.
  * Return: 0 if the base is invalid or the string contains invalid characters.
  */
 int	ft_atoi_base(char *str, char *base)
