@@ -6,7 +6,7 @@
 #    By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 11:48:51 by lseabra-          #+#    #+#              #
-#    Updated: 2025/08/27 17:59:11 by lseabra-         ###   ########.fr        #
+#    Updated: 2025/10/15 17:24:13 by lseabra-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ SRCS = $(addprefix $(SRCS_PATH)/, \
     ft_atoi.c       ft_calloc.c     ft_strdup.c     ft_substr.c \
     ft_strjoin.c    ft_strtrim.c    ft_split.c      ft_itoa.c \
     ft_strmapi.c    ft_striteri.c   ft_putchar_fd.c ft_putstr_fd.c \
-    ft_putendl_fd.c ft_putnbr_fd.c  ft_atoi_base.c \
+    ft_putendl_fd.c ft_putnbr_fd.c  ft_atoi_base.c  ft_split_multi.c \
 )
 BONUS_SRCS = $(addprefix $(SRCS_PATH)/, \
     ft_lstnew_bonus.c      ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
