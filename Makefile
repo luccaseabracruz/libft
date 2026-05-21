@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+         #
+#    By: lucca <lucca@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 11:48:51 by lseabra-          #+#    #+#              #
-#    Updated: 2025/10/15 17:24:13 by lseabra-         ###   ########.fr        #
+#    Updated: 2026/05/21 16:10:38 by lucca            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,14 +23,15 @@ RESET   = \033[0m
 #==============================================================================#
 
 # Library name
-NAME                = libft.a
-PROJECT_NAME        = LIBFT
+NAME			= libft.a
+PROJECT_NAME	= LIBFT
 
 # Paths
-BUILD_PATH          = build
-SRCS_PATH           = srcs
-FT_PRINTF_SRCS_PATH = srcs_ft_printf
-GNL_SRCS_PATH       = srcs_gnl
+BUILD_PATH			= build
+SRCS_PATH			= srcs
+INC_PATH			= includes
+FT_PRINTF_SRCS_PATH	= srcs_ft_printf
+GNL_SRCS_PATH		= srcs_gnl
 
 # Source files
 SRCS = $(addprefix $(SRCS_PATH)/, \
@@ -69,8 +70,9 @@ GNL_BONUS_OBJS  = $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_BONUS_SRCS:.c=.o)))
 BONUS_MARK      = .bonus
 
 # Compiler and flags
-CC      = cc
-CFLAGS  = -Wall -Wextra -Werror
+CC		= cc
+CFLAGS	= -Wall -Wextra -Werror
+LFLAGS	= -I$(INC_PATH)
 
 # Utility commands
 TCH     = touch
@@ -92,13 +94,13 @@ $(NAME): $(OBJS) $(FT_PRINTF_OBJS) $(GNL_OBJS)
 	@echo "$(GREEN)[$(PROJECT_NAME)] Library $(NAME) created.$(RESET)"
 
 $(BUILD_PATH)/%.o: $(SRCS_PATH)/%.c | $(BUILD_PATH)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 
 $(BUILD_PATH)/%.o: $(FT_PRINTF_SRCS_PATH)/%.c | $(BUILD_PATH)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 
 $(BUILD_PATH)/%.o: $(GNL_SRCS_PATH)/%.c | $(BUILD_PATH)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 
 $(BUILD_PATH):
 	@$(MKDIR_P) $(BUILD_PATH)
