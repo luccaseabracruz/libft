@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseabra- <lseabra-@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: lucca <lucca@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:29:24 by lseabra-          #+#    #+#             */
-/*   Updated: 2025/07/10 10:31:19 by lseabra-         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:11:47 by lucca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 /**
  * Allocates memory for an array of nmemb elements of size bytes each and
